@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teslya.circus.controller.MainController" style="-fx-background-color: #f8f9fa; -fx-padding: 10;">
+
+    <MenuBar style="-fx-background-color: #ffffff; -fx-border-color: #dee2e6; -fx-border-width: 0 0 1 0;">
+        <Menu text="Файл">
+            <MenuItem text="Выход" onAction="#logout" />
+        </Menu>
+        <Menu text="Данные">
+            <MenuItem text="Артисты" onAction="#showPerformers" />
+            <MenuItem text="Представления" onAction="#showShows" />
+            <MenuItem text="Расписание" onAction="#showSchedules" />
+            <MenuItem text="Билеты" onAction="#showTickets" />
+        </Menu>
+        <Menu fx:id="adminMenu" text="Админ">
+            <MenuItem text="Пользователи" onAction="#showUsers" />
+        </Menu>
+        <Menu fx:id="statsMenu" text="Статистика">
+            <MenuItem text="Показать статистику" onAction="#showStats" />
+        </Menu>
+        <Menu text="Об авторе">
+            <MenuItem text="Информация" onAction="#showAbout" />
+        </Menu>
+    </MenuBar>
+
+    <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS" style="-fx-tab-min-height: 35px; -fx-tab-max-height: 35px;">
+        <tabs>
+            <Tab text="Добро пожаловать">
+                <content>
+                    <VBox alignment="CENTER" spacing="30" style="-fx-padding: 80;">
+                        <Text text="Информационно-справочная система цирка" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-fill: #212529;" />
+                        <Text text="Выберите раздел в меню выше" style="-fx-font-size: 18px; -fx-fill: #495057;" />
+                    </VBox>
+                </content>
+            </Tab>
+        </tabs>
+    </TabPane>
+
+</VBox>
